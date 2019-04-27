@@ -102,8 +102,8 @@ tfidf_vectorizer = TfidfVectorizer(stop_words='english',
 
 
 def vectorizeData():
-    aws_id = 'AKIAJLY7RF4OZWBDZILQ'
-    aws_secret = '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'
+    aws_id = 'AKIAJ33LPWAZXRN3DYUA'
+    aws_secret = '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'
     client = boto3.client('s3',aws_access_key_id=aws_id, aws_secret_access_key=aws_secret)
     obj_job = client.get_object(Bucket='ads-final', Key='CleanData.csv')
     df = pd.read_csv(obj_job['Body'],encoding='utf-8')
