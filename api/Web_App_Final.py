@@ -23,6 +23,7 @@ from newspaper import Article
 from sklearn import svm
 import os
 import boto3
+nltk.download('stopwords')
 
 # Set the limit for number of articles to download
 def dailyNews(paper):
